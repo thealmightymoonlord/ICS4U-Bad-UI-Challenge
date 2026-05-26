@@ -11,7 +11,7 @@
 
 .container {
   display: grid;       
-  grid-template-columns: auto, auto, auto;
+  grid-template-columns: auto auto auto;
   padding: 10px;          
 }
 
@@ -19,6 +19,7 @@
   padding: 20px;
   border: 1px solid black;
 }
+
 
 .numbers {
     display: flex;
