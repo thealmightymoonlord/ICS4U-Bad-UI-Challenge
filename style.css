@@ -1,38 +1,67 @@
-.box{
-    width: 200px;              
-            height: 150px;            
-            background-color: lightgray; 
-            border: 2px solid #333;    
-            padding: 20px;             
-            margin: 20px;             
-            border-radius: 10px;      
-            box-shadow: 4px 4px 10px rgba(0,0,0,0.2); 
+/* Font classes */
+.comic-sans {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-.container {
-  display: grid;       
-  grid-template-columns: auto auto auto;
-  padding: 10px;          
+.verification-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-tray {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin: 30px 0 500px 0;
 }
 
 .box {
-  padding: 20px;
-  border: 1px solid black;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #333;
+    background: white;
+    cursor: grab;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
 }
 
+.box.dragging {
+    cursor: grabbing;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
 
 .numbers {
     display: flex;
-    gap: 10px;
+    flex-direction: row;
+    gap: 8px;
     margin-top: 20px;
 }
 
 .numbers span {
-    width: 40px;
-    height: 40px;
-    display: flex;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #ccc;
-    cursor: grab;
+    font-size: 16px;
+    position: relative;
 }
+
+.numbers span.has-box {
+    border-color: #4CAF50;
+}
+
+
+.pop-up-ad{
+  position: fixed;
+  border: 2px solid #333;
+  z-index: 9999;
+  background-color: white;
+  width: 200px;
+
+}
+

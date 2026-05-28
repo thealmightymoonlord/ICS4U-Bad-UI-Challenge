@@ -1,98 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bad UI Verification Code</title>
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<html lang="en" class="disable-tab">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bad UI Verification Code</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-<!-- Contact form - implement later, pretty sure this sends a email to me
-    <form action="https://formspree.io/f/xlgvnwzb" method="post">
-        <div class="contact-form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required/>
+        <h1 class="comic-sans">Verification Code</h1>
+        
+        <div class="verification-container">
+            <form id="verification-form">
+                <input class="comic-sans" type="text" id="username" placeholder="Name" required>
+                <input class="comic-sans" type="email" id="email" placeholder="Email" required>
+                <button class="comic-sans" type="submit">Send Code</button>
+            </form>
         </div>
-        <div class="contact-form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required/>
-        </div>
-        <div class="contact-form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-        </div>
-        <input type="submit" value="Submit"/>
-    </form>
--->
-    <h1>Verification Code</h1>
+        
+        <div id="drag-section" style="display:none;">
+            <p class="comic-sans">Drag the correct code (in order):</p>
 
-    <form id="verification-form">
-        <input type="text" id="username" placeholder="Name" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <button type="submit">Send Code</button>
-    </form>
+            <div class="box-tray" id="box-tray">
+                <div class="box" id="box-0"></div>
+                <div class="box" id="box-1"></div>
+                <div class="box" id="box-2"></div>
+                <div class="box" id="box-3"></div>
+                <div class="box" id="box-4"></div>
+                <div class="box" id="box-5"></div>
+            </div>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <div class="numbers">
+                <span data-num="0">0</span>
+                <span data-num="1">1</span>
+                <span data-num="2">2</span>
+                <span data-num="3">3</span>
+                <span data-num="4">4</span>
+                <span data-num="5">5</span>
+                <span data-num="6">6</span>
+                <span data-num="7">7</span>
+                <span data-num="8">8</span>
+                <span data-num="9">9</span>
+            </div>
 
-    <div class = "container">
-    <div class="box">
-        1
-    </div>
-    <div class="box">
-        2
-    </div>
-    <div class="box">
-        3
-    </div>
-    
-    <div class="box">
-        4
-    </div>
+            <button class="comic-sans" id="verify-btn">Verify Code</button>
+        </div> <div id="ad-container"></div>
 
-    <div class="box">
-        5
-    </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="script.js"></script>
 
-    <div class="box">
-        6
-    </div>
-
-    <div class="box">
-        7
-    </div>
-
-    <div class="box">
-        8
-    </div>
-
-    <div class="box">
-        9
-    </div>
-
-    <div class="box">
-        10
-    </div>
-    
-    </div>
-    </div>
-
-    <div class="numbers">
-        <span>0</span>
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
-        <span>6</span>
-        <span>7</span>
-        <span>8</span>
-        <span>9</span>
-    </div>
-
-    <!-- Link to JavaScript -->
-    <script src="script.js"></script>
-</body>
+    </body>
 </html>
